@@ -22,6 +22,13 @@
   </p>
 </div>
 
+# Linux
+
+```
+root用户直接执行以下命令, 根据提示选择对应功能即可。
+
+bash <(curl -s -L https://raw.githubusercontent.com/stminer/stminer/main/linux-install.sh)
+```
 # 导航
 
 <ol>
@@ -238,13 +245,7 @@ BTC增加了动态难度抽水
 
 <p id="linux"></p>
 
-# Linux
 
-```
-root用户直接执行以下命令, 根据提示选择对应功能即可。
-
-bash <(curl -s -L https://raw.githubusercontent.com/stminer/stminer/main/linux-install.sh)
-```
 ### 安装完成之后, 请立即修改登录账号、密码以及启动端口，防止被爆破。
 
 <img src="./image/t12.png" alt="Logo">
