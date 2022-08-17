@@ -2,7 +2,7 @@
 # Author: SAINT
 # github: https://github.com/stminer/stminer
 
-VERSION="2.6.4"
+VERSION="2.8.0"
 
 DOWNLOAD_HOST="https://github.com/stminer/stminer/raw/main/Linux-64"
 
@@ -26,35 +26,8 @@ PATH_TURN_ON="/etc/profile.d"
 PATH_TURN_ON_SH="/etc/profile.d/ktm.sh"
 
 ISSUE() {
-    echo "1.0.0"
-    echo "1.1.0"
-    echo "1.1.1"
-    echo "1.1.2"
-    echo "1.1.3"
-    echo "1.1.4"
-    echo "1.1.5"
-    echo "2.0.0"
-    echo "2.0.1"
-    echo "2.1.0"
-    echo "2.1.1"
-    echo "2.2.0"
-    echo "2.2.1"
-    echo "2.2.2"
-    echo "2.2.3"
-    echo "2.2.4"
-    echo "2.2.5"
-    echo "2.2.6"
-    echo "2.2.7"
     echo "2.3.0"
-    echo "2.3.1"
-    echo "2.3.2"
-    echo "2.3.3"
-    echo "2.4.0"
-    echo "2.4.1"
-    echo "2.4.2"
-    echo "2.4.3"
-    echo "2.5.0"
-    echo "2.5.1"
+    echo "2.6.4"
 }
 
 colorEcho(){
