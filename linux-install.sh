@@ -164,7 +164,7 @@ start() {
 update() {
     turn_off
 
-    installapp 2.6.4
+    installapp 2.8.0
 }
 
 turn_on() {
@@ -433,7 +433,7 @@ read -p "$(echo -e "请选择[1-14]：")" choose
 
 case $choose in
 1)
-    installapp 2.6.4
+    installapp 2.8.0
     ;;
 2)
     update
