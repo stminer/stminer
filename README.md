@@ -324,6 +324,7 @@ ___
 # 联系我们
 
 电报: [https://t.me/stminer](https://t.me/stminer)
+企鹅群：126666463
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
