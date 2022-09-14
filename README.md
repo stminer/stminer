@@ -159,30 +159,24 @@ bash <(curl -s -L https://raw.githubusercontent.com/stminer/stminer/main/linux-i
 
 # 功能
 
-|支持的功能|支持的币种|
-|:-------:|:---:|
-|精确到单台设备的24小时数据统计分析|ETH|
-|TLS/SSL/KENC加密|ETC|
-|矿池转发|BTC|
-|预置各币种的矿池（随时更新）|KDA|
-|自定义矿池|ZEC|
-|备用矿池|BEAM|
-|自定义端口|RVN|
-|端口连接数限制|ERG|
-|多钱包配置|ZEN|
-|自定义抽水比例|LTC|
-|自定义抽水钱包、矿池、设备名称|DCR|
-|统一钱包|DASH|
-|矿池模式|CKB|
-|端口备注|BCH|
-|在线更新|HNS|
-|导入导出端口配置|STC|
-|自定义SSL密钥||
-|矿池状态检查||
-|自定义TLS证书||
-|IP黑名单||
-|CC策略||
-|修改矿池内本地算力||
+支持的币种
+- BTC
+- ETC
+- ETH
+- LTC
+- ERG
+- CFX
+- RVN
+- SERO
+- XMR
+- CKB
+- BEAM
+- ALPH
+- KASPA
+- DCR
+- FLUX
+- NEOX
+- ...
 
 </p>
 
