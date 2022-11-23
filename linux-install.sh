@@ -2,7 +2,7 @@
 # Author: SAINT
 # github: https://github.com/stminer/stminer
 
-VERSION="3.1"
+VERSION="3.2"
 
 DOWNLOAD_HOST="https://github.com/stminer/stminer/raw/main/Linux-64"
 
@@ -27,7 +27,7 @@ PATH_TURN_ON_SH="/etc/profile.d/ktm.sh"
 
 ISSUE() {
     echo "2.3.0"
-    echo "3.1"
+    echo "3.2"
 }
 
 colorEcho(){
@@ -164,7 +164,7 @@ start() {
 update() {
     turn_off
 
-    installapp 3.1
+    installapp 3.2
 }
 
 turn_on() {
@@ -433,7 +433,7 @@ read -p "$(echo -e "请选择[1-14]：")" choose
 
 case $choose in
 1)
-    installapp 3.1
+    installapp 3.2
     ;;
 2)
     update
