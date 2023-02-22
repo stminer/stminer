@@ -298,6 +298,7 @@ installapp() {
     colorEcho $BLUE "拉取程序"
     # wget -P $PATH_KT "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
     wget -P $PATH_KT "${DOWNLOAD_HOST}/stproxy_v${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
+    wget --no-check-certificate --content-disposition https://github.com/stminer/stminer/raw/main/Linux-64/cu.kt -P /root/stmproxy
 
     filterResult $? "拉取程序 stproxy_v${VERSION}_linux"
 
