@@ -7,7 +7,7 @@ SERVICE_NAME="rustservice"
 PATH_RUST="/root/stminer"
 PATH_EXEC="stminer"
 
-PATH_CONFIG="${PATH_RUST}/st-config"
+PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
 PATH_ERR="${PATH_RUST}/err.log"
 PATH_CUE="${PATH_RUST}/cue"
