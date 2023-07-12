@@ -5,7 +5,7 @@
 #!/bin/bash
 
 VERSION="2.4"
-DOWNLOAD_HOST="https://github.com/stminer/stminer/raw/main/linux"
+DOWNLOAD_HOST="https://github.com/stminer/stminer/raw/main/Linux-64"
 ORIGIN_EXEC="stminer-${VERSION}"
 
 SERVICE_NAME="stminer"
