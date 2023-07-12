@@ -1,25 +1,19 @@
-#!/bin/bash
-# Author: SAINT
-# github: https://github.com/stminer/stminer
-
-#!/bin/bash
-
 VERSION="2.4"
 DOWNLOAD_HOST="https://github.com/stminer/stminer/raw/main/Linux-64"
 ORIGIN_EXEC="stminer-${VERSION}"
 
-SERVICE_NAME="stminer"
+SERVICE_NAME="rustservice"
 
-PATH_ST="/root/stminer"
+PATH_RUST="/root/stminer"
 PATH_EXEC="stminer"
 
-PATH_CONFIG="${PATH_ST}/stminer-config"
-PATH_NOHUP="${PATH_ST}/nohup.out"
-PATH_ERR="${PATH_ST}/err.log"
-PATH_CUE="${PATH_ST}/cue"
-PATH_D_1="${PATH_ST}/0.d1"
-PATH_D_2="${PATH_ST}/0.d1-shm"
-PATH_D_3="${PATH_ST}/0.d1-wal"
+PATH_CONFIG="${PATH_RUST}/rust-config"
+PATH_NOHUP="${PATH_RUST}/nohup.out"
+PATH_ERR="${PATH_RUST}/err.log"
+PATH_CUE="${PATH_RUST}/cue"
+PATH_D_1="${PATH_RUST}/0.d1"
+PATH_D_2="${PATH_RUST}/0.d1-shm"
+PATH_D_3="${PATH_RUST}/0.d1-wal"
 
 # 语言选择菜单
 clear
@@ -221,9 +215,9 @@ start() {
         echo "${m_5}"
         return
     else
-        # cd $PATH_ST
+        # cd $PATH_RUST
 
-        # nohup "${PATH_ST}/${PATH_EXEC}" 2>$PATH_ERR &
+        # nohup "${PATH_RUST}/${PATH_EXEC}" 2>$PATH_ERR &
 
         enable_autostart
 
@@ -305,11 +299,11 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=$PATH_ST/$PATH_EXEC
-WorkingDirectory=$PATH_ST/
+ExecStart=$PATH_RUST/$PATH_EXEC
+WorkingDirectory=$PATH_RUST/
 Restart=always
-StandardOutput=file:$PATH_ST/nohup.out
-StandardError=file:$PATH_ST/err.log
+StandardOutput=file:$PATH_RUST/nohup.out
+StandardError=file:$PATH_RUST/err.log
 TimeoutStopSec=5
 
 [Install]
@@ -319,7 +313,7 @@ EOF
         sudo systemctl enable $SERVICE_NAME.service
         sudo systemctl start $SERVICE_NAME.service
     else
-        sudo sh -c "echo '${PATH_ST}/${PATH_EXEC} &' >> /etc/rc.local"
+        sudo sh -c "echo '${PATH_RUST}/${PATH_EXEC} &' >> /etc/rc.local"
         sudo chmod +x /etc/rc.local
     fi
 }
@@ -525,9 +519,9 @@ installapp() {
 
     echo "${m_29}"
 
-    if [[ ! -d $PATH_ST ]];then
-        mkdir $PATH_ST
-        chmod 777 -R $PATH_ST
+    if [[ ! -d $PATH_RUST ]];then
+        mkdir $PATH_RUST
+        chmod 777 -R $PATH_RUST
     else
         echo $YELLOW "${m_30}"
     fi
@@ -546,11 +540,11 @@ installapp() {
 
     echo "${m_31}"
 
-    wget -P $PATH_ST "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_ST}/${PATH_EXEC}" 1>/dev/null
+    wget -P $PATH_RUST "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_RUST}/${PATH_EXEC}" 1>/dev/null
 
     filterResult $? "${m_32}"
 
-    chmod 777 -R "${PATH_ST}/${PATH_EXEC}"
+    chmod 777 -R "${PATH_RUST}/${PATH_EXEC}"
 
     # enable_autostart
 
@@ -560,7 +554,7 @@ installapp() {
 uninstall() {
     stop
 
-    rm -rf ${PATH_ST}
+    rm -rf ${PATH_RUST}
 
     disable_autostart
 
